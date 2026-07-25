@@ -215,6 +215,23 @@ p { margin: 0 0 18px; }
 .galerie a:hover { transform: translateY(-4px) scale(1.012); border-color: var(--forge); box-shadow: 0 22px 46px rgba(0, 0, 0, .55); }
 .galerie img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 
+/* ---------- bande de cartes du jeu ---------- */
+.cartes {
+  display: flex; gap: 20px; padding: 14px 0 30px; margin-top: 26px;
+  overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin;
+}
+.cartes img {
+  flex: 0 0 auto; width: 208px; border-radius: 14px; scroll-snap-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .55);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.cartes img:nth-child(odd) { transform: rotate(-2.2deg); }
+.cartes img:nth-child(even) { transform: rotate(1.8deg) translateY(6px); }
+.cartes img:hover { transform: rotate(0deg) translateY(-10px) scale(1.03); box-shadow: 0 26px 60px rgba(0, 0, 0, .7); }
+
+/* logo du jeu dans son hero */
+.logo-jeu { width: min(360px, 74vw); margin-bottom: 22px; filter: drop-shadow(0 16px 34px rgba(0, 0, 0, .6)); }
+
 /* ---------- fiche de faits ---------- */
 .faits {
   list-style: none; padding: 0; margin: 0; display: grid; gap: 1px;
