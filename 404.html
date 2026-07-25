@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404, page not found: Games of Forge</title>
+<meta name="robots" content="noindex">
+<script>
+// Rattrapage des anciennes adresses en /en/... : l'anglais vit a la racine, on renvoie vers la meme page.
+(function () {
+  var m = /^\/en\/(.*)$/.exec(location.pathname);
+  if (m) { location.replace('/' + m[1] + location.hash); }
+})();
+</script>
+<link rel="icon" href="/assets/gof-icon.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="marque" href="/"><img src="/assets/gof-logo.png" alt="Games of Forge"> Games of Forge</a>
+    <div class="liens">
+      <a href="/">Studio</a>
+      <a href="/herd.html">Herd</a>
+      <a href="/pierre.html">Founder</a>
+      <a class="langue" data-langue="fr" href="/fr/" hreflang="fr">FR</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero compact">
+  <div class="wrap">
+    <p class="surtitre">Error 404</p>
+    <h1>This page does not exist.</h1>
+    <p class="chapo">The address may have changed, or the link may be incomplete. Everything else is still here.</p>
+    <p class="note">Cette page n'existe pas. Le site en fran&ccedil;ais est ici : <a href="/fr/">games-of-forge.github.io/fr/</a></p>
+    <div class="actions">
+      <a class="bouton" href="/">Back to the studio</a>
+      <a class="bouton creux" href="/herd.html">Herd</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Games of Forge &middot; France &middot; Fully remote</div>
+    <div><a href="/pierre.html">Founder</a> &middot; <a href="/herd.html">Herd</a> &middot; <a data-langue="fr" href="/fr/">Fran&ccedil;ais</a> &middot; <a href="mailto:pierre.aceituno@gmail.com">Contact</a></div>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+</body>
+</html>
