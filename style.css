@@ -215,6 +215,10 @@ p { margin: 0 0 18px; }
 
 /* ---------- equipe d'un projet ---------- */
 .equipe { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+/* Trois cofondateurs sur la page studio (la grille est calee sur quatre).
+   A declarer ICI, avant les media queries : une regle de meme specificite ecrite plus bas
+   l emporterait sur @media et la page resterait a trois colonnes sur telephone. */
+.equipe.trois { grid-template-columns: repeat(3, 1fr); }
 .equipe .membre .portrait { width: 100%; }
 .equipe .membre .portrait .initiales { font-size: 34px; }
 .equipe .membre h3 { font-size: 17px; margin: 14px 0 2px; }
@@ -225,7 +229,7 @@ p { margin: 0 0 18px; }
 .equipe .membre p { font-size: 14.5px; color: var(--texte-doux); margin: 0; }
 /* On reste a deux colonnes meme sur petit ecran : une seule colonne donnerait sept portraits
    plein cadre a la suite, soit une section de 3 500 px que personne ne fait defiler. */
-@media (max-width: 900px) { .equipe { grid-template-columns: 1fr 1fr; gap: 16px; } }
+@media (max-width: 900px) { .equipe, .equipe.trois { grid-template-columns: 1fr 1fr; gap: 16px; } }
 @media (max-width: 520px) { .equipe .membre h3 { font-size: 15.5px; } .equipe .membre .role { font-size: 10.5px; } }
 
 /* ---------- galerie ---------- */
