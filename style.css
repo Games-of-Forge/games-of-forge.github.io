@@ -123,6 +123,13 @@ body::after {
 .preuve img { width: 108px; border-radius: 3px; }
 .preuve p { margin: 0; font-size: 14.5px; color: var(--texte-doux); max-width: 46ch; }
 .preuve b { color: var(--texte); }
+a.preuve { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+a.preuve::after {
+  content: "›"; margin-left: 2px; font-size: 26px; line-height: 1; color: var(--forge);
+  transition: transform .25s ease; transform: translateX(0);
+}
+a.preuve:hover { transform: translateY(-3px); border-color: var(--forge); box-shadow: 0 18px 40px rgba(0, 0, 0, .5); }
+a.preuve:hover::after { transform: translateX(4px); }
 
 /* ---------- boutons ---------- */
 .bouton {
