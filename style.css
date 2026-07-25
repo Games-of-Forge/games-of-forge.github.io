@@ -213,6 +213,21 @@ p { margin: 0 0 18px; }
 .portrait img { width: 100%; height: 100%; object-fit: cover; }
 .portrait .initiales { font-size: 46px; font-weight: 800; color: var(--texte-faible); letter-spacing: .06em; }
 
+/* ---------- equipe d'un projet ---------- */
+.equipe { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.equipe .membre .portrait { width: 100%; }
+.equipe .membre .portrait .initiales { font-size: 34px; }
+.equipe .membre h3 { font-size: 17px; margin: 14px 0 2px; }
+.equipe .membre .role {
+  font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--forge-clair); font-weight: 800; margin: 0 0 8px;
+}
+.equipe .membre p { font-size: 14.5px; color: var(--texte-doux); margin: 0; }
+/* On reste a deux colonnes meme sur petit ecran : une seule colonne donnerait sept portraits
+   plein cadre a la suite, soit une section de 3 500 px que personne ne fait defiler. */
+@media (max-width: 900px) { .equipe { grid-template-columns: 1fr 1fr; gap: 16px; } }
+@media (max-width: 520px) { .equipe .membre h3 { font-size: 15.5px; } .equipe .membre .role { font-size: 10.5px; } }
+
 /* ---------- galerie ---------- */
 .galerie { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .galerie a {
@@ -221,6 +236,21 @@ p { margin: 0 0 18px; }
 }
 .galerie a:hover { transform: translateY(-4px) scale(1.012); border-color: var(--forge); box-shadow: 0 22px 46px rgba(0, 0, 0, .55); }
 .galerie img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+/* ---------- captures larges, empilees ----------
+   Panneaux d'interface : il faut toute la largeur pour qu'ils restent lisibles,
+   donc pas de grille a 3 colonnes ici, et pas de recadrage en 16/9. */
+.captures { display: grid; gap: 18px; }
+.captures img {
+  display: block; width: 100%; height: auto; border-radius: var(--rayon);
+  border: 1px solid var(--trait); background: var(--noir-3);
+}
+/* Sur telephone, une capture d'interface reduite a la largeur de l'ecran n'est plus lisible :
+   on lui garde sa taille et on laisse le lecteur faire glisser les trois d'un seul geste. */
+@media (max-width: 720px) {
+  .captures { overflow-x: auto; scrollbar-width: thin; }
+  .captures img { width: 760px; max-width: none; }
+}
 
 /* ---------- affiche du trailer (lecture sur Steam) ---------- */
 .affiche {
