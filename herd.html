@@ -1,16 +1,19 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Herd, le premier deckbuilder musical : Games of Forge</title>
-<meta name="description" content="Herd, jeu de cartes tactique au tour par tour où le gameplay manipule la musique. Développé et édité par Games of Forge sur Unreal Engine 5. Démo jouable gratuitement sur Steam.">
+<script>document.documentElement.className+=' js';(function(){try{if(localStorage.getItem('gof-langue'))return;if((navigator.language||'').toLowerCase().indexOf('fr')===0)location.replace('fr/herd.html');}catch(e){}})();</script>
+<title>Herd, the first musical deckbuilder: Games of Forge</title>
+<meta name="description" content="Herd, a turn-based tactical card game where the gameplay shapes the music. Developed and published by Games of Forge in Unreal Engine 5. Demo free to play on Steam.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Herd, le premier deckbuilder musical">
-<meta property="og:description" content="Jeu de cartes tactique au tour par tour où le gameplay manipule la musique. Développé et édité par Games of Forge. Démo gratuite sur Steam.">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Herd, the first musical deckbuilder">
+<meta property="og:description" content="A turn-based tactical card game where the gameplay shapes the music. Developed and published by Games of Forge. Free demo on Steam.">
 <meta property="og:image" content="https://games-of-forge.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="fr" href="https://games-of-forge.github.io/fr/herd.html">
+<link rel="alternate" hreflang="en" href="https://games-of-forge.github.io/herd.html">
 <link rel="icon" href="assets/gof-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -18,74 +21,91 @@
 
 <nav class="nav">
   <div class="wrap">
-    <a class="nav-brand" href="index.html"><img src="assets/gof-logo.png" alt="Games of Forge"> Games of Forge</a>
-    <div class="nav-links">
+    <a class="marque" href="index.html"><img src="assets/gof-logo.png" alt="Games of Forge"> Games of Forge</a>
+    <div class="liens">
       <a href="index.html">Studio</a>
-      <a href="herd.html" class="on">Herd</a>
-      <a href="pierre.html">Fondateur</a>
+      <a href="herd.html" class="actif">Herd</a>
+      <a href="pierre.html">Founder</a>
       <a href="index.html#contact">Contact</a>
-      <a class="lang" href="en/herd.html" hreflang="en">EN</a>
+      <a class="langue" data-langue="fr" href="fr/herd.html" hreflang="fr">FR</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero compact">
+  <div class="hero-fond" style="background-image:url('assets/herd/capture-2.jpg')"></div>
   <div class="wrap">
-    <p class="kicker" style="color:#f0a273">Démo jouable sur Steam</p>
-    <h1>Herd, le premier deckbuilder musical.</h1>
-    <p class="sub">Un jeu de cartes tactique au tour par tour où chaque carte jouée transforme la musique du duel. Le morceau que vous entendez est la partie que vous êtes en train de jouer.</p>
-    <p class="meta">Unreal Engine 5 · PC / Steam · 1 contre 1 · Accès anticipé à venir</p>
-    <div class="cta">
-      <a class="btn" href="https://store.steampowered.com/app/4291690/" target="_blank" rel="noopener">Jouer à la démo, gratuit</a>
-      <a class="btn ghost" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener">La page Steam du jeu</a>
+    <p class="surtitre">Demo playable on Steam</p>
+    <h1>Herd, the first <em>musical deckbuilder</em>.</h1>
+    <p class="chapo">A turn-based tactical card game where every card played reshapes the music of the duel. The track you are hearing is the match you are playing.</p>
+    <p class="tampon">Unreal Engine 5 · PC / Steam · 1 versus 1 · Early Access coming</p>
+    <div class="actions">
+      <a class="bouton" href="https://store.steampowered.com/app/4291690/" target="_blank" rel="noopener">Play the demo, free</a>
+      <a class="bouton creux" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener">Steam page</a>
     </div>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <p class="kicker">Le jeu</p>
-    <h2>Jouer une carte, c'est écrire une mesure</h2>
-    <p class="lead">Deux joueurs s'affrontent au tour par tour. Les cartes posées alimentent une composition qui se construit en direct : les choix tactiques et le morceau sont la même chose. C'est la mécanique qui a demandé le plus de recherche, et c'est celle qui fait le jeu.</p>
+    <p class="surtitre apparait">The game</p>
+    <h2 class="apparait">Playing a card means writing a bar</h2>
+    <p class="intro apparait">Two players face off turn by turn. The cards they play feed a composition built live: the tactical choices and the music are the same thing. It is the mechanic that took the most research, and it is the one that makes the game.</p>
 
-    <div class="grid c2">
-      <div class="feature">
-        <h3>Ce que le studio a fait</h3>
-        <p>Direction du jeu, conception des systèmes et de la mécanique musicale, développement Unreal Engine 5 en C++, gestion de l'équipe et du budget, et la mise sur Steam. Le projet est né d'une commande d'un client international, et Games of Forge en est crédité développeur et éditeur.</p>
+    <div class="grille c2">
+      <div class="bloc apparait">
+        <h3>What the studio did</h3>
+        <p style="margin-bottom:0">Game direction, systems and musical mechanic design, Unreal Engine 5 development in C++, team and budget management, and getting it onto Steam. The project started as a commission from an international client, and Games of Forge is credited as its developer and publisher.</p>
       </div>
-      <div class="feature">
-        <h3>Pourquoi ça compte</h3>
-        <p>Une idée neuve qui tient réellement dans les mains d'un joueur : la démo est publique, gratuite, et le jeu part en accès anticipé. C'est cette chaîne complète, du concept jusqu'à la boutique, qu'on remet à disposition en co-développement.</p>
+      <div class="bloc apparait" data-delai="120">
+        <h3>Why it matters</h3>
+        <p style="margin-bottom:0">A new idea that actually holds up in a player's hands: the demo is public, free, and the game is heading into Early Access. That full chain, from concept to storefront, is what we make available in co-development.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section class="teinte">
   <div class="wrap">
-    <p class="kicker">Fiche</p>
-    <h2>En bref</h2>
-    <ul class="facts">
-      <li><b>Genre</b> Jeu de cartes tactique au tour par tour</li>
-      <li><b>Plateforme</b> PC (Windows), sur Steam</li>
-      <li><b>Moteur</b> Unreal Engine 5, C++</li>
-      <li><b>Mode</b> 1 contre 1, en ligne ou contre l'IA</li>
-      <li><b>Statut</b> Démo gratuite jouable depuis juin 2026, accès anticipé à venir</li>
-      <li><b>Studio</b> Games of Forge, développeur et éditeur</li>
+    <p class="surtitre apparait">In game</p>
+    <h2 class="apparait">A duel that sounds like something</h2>
+    <div class="galerie" style="margin-top:34px">
+      <a class="apparait" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener"><img src="assets/herd/capture-1.jpg" alt="Herd, in game" loading="lazy"></a>
+      <a class="apparait" data-delai="80" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener"><img src="assets/herd/capture-2.jpg" alt="Herd, in game" loading="lazy"></a>
+      <a class="apparait" data-delai="160" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener"><img src="assets/herd/capture-3.jpg" alt="Herd, in game" loading="lazy"></a>
+      <a class="apparait" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener"><img src="assets/herd/capture-4.jpg" alt="Herd, in game" loading="lazy"></a>
+      <a class="apparait" data-delai="80" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener"><img src="assets/herd/capture-5.jpg" alt="Herd, in game" loading="lazy"></a>
+      <a class="apparait" data-delai="160" href="https://store.steampowered.com/app/4273350/" target="_blank" rel="noopener"><img src="assets/herd/capture-6.jpg" alt="Herd, in game" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="surtitre apparait">Fact sheet</p>
+    <h2 class="apparait">At a glance</h2>
+    <ul class="faits apparait" style="margin-top:30px">
+      <li><b>Genre</b> Turn-based tactical card game</li>
+      <li><b>Platform</b> PC (Windows), on Steam</li>
+      <li><b>Engine</b> Unreal Engine 5, C++</li>
+      <li><b>Modes</b> 1 versus 1, online or against the AI</li>
+      <li><b>Status</b> Free demo out since June 2026, Early Access to come</li>
+      <li><b>Studio</b> Games of Forge, developer and publisher</li>
     </ul>
-    <div class="cta">
-      <a class="btn" href="https://store.steampowered.com/app/4291690/" target="_blank" rel="noopener">Jouer à la démo</a>
-      <a class="btn ghost" style="color:var(--ink);border-color:var(--line)" href="index.html#contact">Parler d'un projet</a>
+    <div class="actions">
+      <a class="bouton" href="https://store.steampowered.com/app/4291690/" target="_blank" rel="noopener">Play the demo</a>
+      <a class="bouton creux" href="index.html#contact">Talk about a project</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>Games of Forge · France · Full remote</div>
-    <div><a href="index.html">Studio</a> · <a href="pierre.html">Fondateur</a> · <a href="mailto:pierre.aceituno@gmail.com">Contact</a></div>
+    <div>Games of Forge · France · Fully remote</div>
+    <div><a href="index.html">Studio</a> · <a href="pierre.html">Founder</a> · <a data-langue="fr" href="fr/herd.html">Français</a> · <a href="mailto:pierre.aceituno@gmail.com">Contact</a></div>
   </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>
