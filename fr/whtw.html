@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=' js';</script>
+<title>WHTW Fantasy Adventures, mod Total War: Warhammer III : projet personnel de Pierre Aceituno</title>
+<meta name="description" content="WHTW Fantasy Adventures, mod de contrôle de héros pour Total War: Warhammer III. Caméra à la troisième personne, combat au corps à corps et outil de création de personnage, en Lua sur un moteur fermé. Projet personnel de Pierre Aceituno, en développement.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="WHTW Fantasy Adventures, mod Total War: Warhammer III">
+<meta property="og:description" content="Descendre au niveau d'un seul héros dans un jeu de stratégie. Projet personnel de Pierre Aceituno, en développement.">
+<meta property="og:image" content="https://games-of-forge.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="fr" href="https://games-of-forge.github.io/fr/whtw.html">
+<link rel="alternate" hreflang="en" href="https://games-of-forge.github.io/whtw.html">
+<link rel="icon" href="../assets/gof-icon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="marque" href="index.html"><img src="../assets/gof-logo.png" alt="Games of Forge"> Games of Forge</a>
+    <div class="liens">
+      <a href="index.html">Studio</a>
+      <a href="herd.html">Herd</a>
+      <a href="pierre.html" class="actif">Fondateur</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="langue" data-langue="en" href="../whtw.html" hreflang="en">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero compact">
+  <div class="hero-fond" style="background-image:url('../assets/whtw/hero.jpg')"></div>
+  <div class="wrap">
+    <span class="etiquette">Projet personnel de Pierre</span>
+    <p class="surtitre">Total War: Warhammer III</p>
+    <h1>WHTW Fantasy Adventures, <em>un seul héros</em> dans un jeu de stratégie.</h1>
+    <p class="chapo">Total War vous donne une armée et une vue du ciel. Je cherche ce qui se passe quand on descend au niveau d'un personnage unique, dans le même jeu, sans jamais quitter la campagne.</p>
+    <p class="tampon">Lua et tables de données · En développement · Pas de date</p>
+    <div class="actions">
+      <a class="bouton" href="pierre.html">Le parcours de Pierre</a>
+      <a class="bouton creux" href="torfa.html">L'autre projet perso</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="surtitre apparait">Le pari</p>
+    <h2 class="apparait">Faire faire au moteur ce qu'il n'a pas prévu</h2>
+    <p class="intro apparait">Warscape, le moteur de Total War, est fermé : on ne touche ni au code ni aux animations, seulement aux données et aux scripts. Le contrôle d'un héros à la troisième personne n'y est prévu nulle part. Toute la question est de savoir jusqu'où on peut aller avec ce qui reste, et où se trouve exactement le mur. C'est le même nom que <a href="torfa.html">TOR Fantasy Adventures</a>, la même envie, sur un moteur qui n'a rien à voir.</p>
+
+    <div class="grille c2">
+      <div class="bloc apparait">
+        <h3>Ce qui tourne déjà</h3>
+        <p style="margin-bottom:0">Un squelette jouable validé en jeu début juillet 2026 : déplacement au clavier découplé du déplacement de caméra, caméra à l'épaule, verrouillage de cible, esquive et deux capacités. Ça n'a rien d'un jeu, mais ça prouve que la fantasy tient debout dans ce moteur.</p>
+      </div>
+      <div class="bloc apparait" data-delai="120">
+        <h3>Ce que le moteur refuse</h3>
+        <p style="margin-bottom:0">Aucune animation nouvelle, aucune visée souris. La position du curseur est illisible en Lua, en bataille comme en campagne : impossible de faire un vrai mouselook. La parade retenue est de ne jamais lire la souris et de dériver l'orientation du héros de celle de la caméra, qui elle est lisible. Contournement à 100 % dans le moteur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teinte">
+  <div class="wrap">
+    <p class="surtitre apparait">L'Atelier</p>
+    <h2 class="apparait">Créer son personnage dans un jeu qui ne le permet pas</h2>
+    <p class="intro apparait">La partie la plus avancée du projet est un outil d'auteur : composer un héros et son équipement pièce par pièce, et le voir tout de suite. Plutôt que de fabriquer une fenêtre de prévisualisation maison, qui s'est heurtée six fois au même mur, l'Atelier détourne le panneau 3D du jeu lui-même. Sur les quelque vingt mille pièces recensées dans les données, un peu plus de cinq cents sont aujourd'hui utilisables dans la Forge.</p>
+    <ul class="faits apparait" style="margin-top:30px">
+      <li><b>Prévisualisation</b> Le panneau de détails du jeu, réemployé et rendu manipulable à la souris</li>
+      <li><b>Assemblage</b> Composition de modèles à la volée, appliqués au personnage sans redémarrer</li>
+      <li><b>Couleur</b> Recoloration des textures hors jeu, faute de shader de teinte accessible</li>
+      <li><b>Chaîne de production</b> Jouer, créer en jeu, quitter, lancer un script, relancer : le cycle complet tient en une commande</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="surtitre apparait">Honnêtement</p>
+    <h2 class="apparait">Rien n'est sorti</h2>
+    <p class="intro apparait" style="margin-bottom:0">Pas de version publique, pas de date, pas de promesse. Je le montre ici parce que c'est là que je cherche, et parce que la façon dont on contourne un moteur fermé dit sans doute plus de ma manière de travailler qu'une page de compétences. S'il sort un jour, ce sera écrit sur cette page.</p>
+  </div>
+</section>
+
+<section class="teinte">
+  <div class="wrap">
+    <p class="surtitre apparait">Fiche</p>
+    <h2 class="apparait">En bref</h2>
+    <ul class="faits apparait" style="margin-top:30px">
+      <li><b>Nature</b> Mod de contrôle de héros, campagne et bataille</li>
+      <li><b>Jeu</b> Total War: Warhammer III</li>
+      <li><b>Technique</b> Lua et tables de données, moteur Warscape fermé</li>
+      <li><b>Fait à ce jour</b> Squelette de contrôle validé en jeu, outil de création de personnage</li>
+      <li><b>Statut</b> En développement, aucune version publique</li>
+    </ul>
+    <div class="actions">
+      <a class="bouton" href="torfa.html">TOR Fantasy Adventures</a>
+      <a class="bouton creux" href="pierre.html">Le parcours de Pierre</a>
+    </div>
+    <p class="note apparait" style="margin-top:30px">Projet personnel et non commercial de Pierre Aceituno, mené en dehors du studio. Sans lien avec Games Workshop ni Creative Assembly. L'image de cette page est un visuel de titre, pas une capture de jeu.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Games of Forge · France · Full remote</div>
+    <div><a href="index.html">Studio</a> · <a href="pierre.html">Fondateur</a> · <a data-langue="en" href="../whtw.html">English</a> · <a href="mailto:pierre.aceituno@gmail.com">Contact</a></div>
+  </div>
+</footer>
+
+<script src="../site.js"></script>
+</body>
+</html>
