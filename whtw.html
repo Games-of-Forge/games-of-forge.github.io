@@ -56,11 +56,11 @@
     <div class="grille c2">
       <div class="bloc apparait">
         <h3>What already runs</h3>
-        <p style="margin-bottom:0">A playable skeleton validated in game in early July 2026: keyboard movement decoupled from camera movement, an over-the-shoulder camera, target lock, a dash and two abilities. It is nothing like a game yet, but it proves the fantasy stands up inside that engine.</p>
+        <p style="margin-bottom:0">A playable skeleton validated in game in early July 2026: keyboard movement, an over-the-shoulder camera, target lock, a dash and two abilities. It is nothing like a game yet, but it proves the fantasy stands up inside that engine.</p>
       </div>
       <div class="bloc apparait" data-delai="120">
         <h3>What the engine refuses</h3>
-        <p style="margin-bottom:0">No new animation, no mouse aiming. The cursor position cannot be read from Lua, in battle or in campaign, so real mouselook is out. The way around it is to never read the mouse and derive the hero's facing from the camera's, which can be read. A workaround entirely inside the engine.</p>
+        <p style="margin-bottom:0">No new animation, no mouse aiming, and a good share of the inputs you would want are simply not exposed. Every limit like that forces you to find a way round the side, entirely inside the engine, without ever touching the game's code. That is most of the work, and it is what makes the project interesting.</p>
       </div>
     </div>
   </div>
@@ -70,12 +70,12 @@
   <div class="wrap">
     <p class="surtitre apparait">L'Atelier</p>
     <h2 class="apparait">Building a character in a game that does not allow it</h2>
-    <p class="intro apparait">The furthest along part of the project is an authoring tool: assembling a hero and their equipment piece by piece, and seeing it immediately. Rather than building a custom preview window, which hit the same wall six times, the tool hijacks the game's own 3D panel. Out of roughly twenty thousand pieces catalogued in the data, a little over five hundred are usable in the forge today.</p>
+    <p class="intro apparait">The furthest along part of the project is an authoring tool: assembling a hero and their equipment piece by piece, and seeing it immediately. Six architectures hit the same wall before the seventh held. Out of roughly twenty thousand pieces catalogued in the game's data, a little over five hundred are usable in the forge today.</p>
     <ul class="faits apparait" style="margin-top:30px">
-      <li><b>Preview</b> The game's own detail panel, reused and made mouse-driven</li>
-      <li><b>Assembly</b> Models composed on the fly and applied to the character without a restart</li>
-      <li><b>Colour</b> Textures recoloured offline, for lack of an accessible tint shader</li>
-      <li><b>Pipeline</b> Play, create in game, quit, run one script, relaunch: the whole cycle is a single command</li>
+      <li><b>Preview</b> A 3D preview you can turn with the mouse, in game, while you assemble</li>
+      <li><b>Assembly</b> The character changes face and gear without leaving the session</li>
+      <li><b>Colour</b> Custom tints, on an engine that does not expose what you would need</li>
+      <li><b>Pipeline</b> From a choice made in game to usable content, the whole cycle is a single command</li>
     </ul>
   </div>
 </section>
@@ -84,7 +84,8 @@
   <div class="wrap">
     <p class="surtitre apparait">Honestly</p>
     <h2 class="apparait">Nothing has shipped</h2>
-    <p class="intro apparait" style="margin-bottom:0">No public build, no date, no promise. I show it here because this is where I do my searching, and because how you get around a closed engine probably says more about the way I work than a page of skills would. If it ever ships, it will be written on this page.</p>
+    <p class="intro apparait">No public build, no date, no promise. I show it here because this is where I do my searching, and because how you get around a closed engine probably says more about the way I work than a page of skills would. If it ever ships, it will be written on this page.</p>
+    <p class="intro apparait" data-delai="100" style="margin-bottom:0">What I do not spell out here is <b>how</b> each wall was got around. Those solutions cost me months and they are part of what the project is worth. If the subject genuinely interests you, <a href="index.html#contact">write to me</a>.</p>
   </div>
 </section>
 
